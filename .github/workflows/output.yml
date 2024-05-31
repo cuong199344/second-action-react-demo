@@ -1,17 +1,9 @@
-name: Output information
+name: Output Information
 on: workflow_dispatch
 jobs:
-  info: 
+  info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output github context
-      # toJSON: chuyển metadata thành dạng JSON
-        run: echo "${{ toJSON(github) }}"
-      - name: Install NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm test
+      - name: Output Information
+        run: echo "${{ toJSON(github)}}"
+
